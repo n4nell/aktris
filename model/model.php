@@ -9,7 +9,7 @@ class Model extends Connect {
     }
 
     protected function findOne($id) {
-        $r=$this->connect()->query("SELECT * FROM daftar WHERE id=$id".intval($id));
+        $r=$this->connect()->query("SELECT * FROM daftar WHERE id=".intval($id));
         while($d=$r->fetch_assoc()) $p[]=$d;
         return $p??[];
     }
