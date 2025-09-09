@@ -8,7 +8,7 @@ class Model extends Connect {
         return $p??[];
     }
 
-    function find($id) {
+    function findOne($id) {
         $r=$this->connect()->query("SELECT * FROM daftar WHERE id=$id".intval($id));
         while($d=$r->fetch_assoc()) $p[]=$d;
         return $p??[];
