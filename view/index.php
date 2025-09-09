@@ -7,20 +7,20 @@
 </head>
 <body>
 <?php 
-    include_once __DIR__."/../view/daftar/view.php";
-    include_once __DIR__."/../view/utils/utils.php";
-    include_once __DIR__."/../controller/controller.php";
-    $p = new View();
-    $p->findAll();
+include_once __DIR__."/../view/daftar/view.php";
+include_once __DIR__."/../view/utils/utils.php";
+include_once __DIR__."/../controller/controller.php";
+$p = new View();
+$p->find();
 ?>
 
 <table border="1">
-<th>
-    <td>Id</td>
-    <td>Nama</td>
-    <td>Negara</td>
-    <td>Aktif</td>
-</th>
+<tr>
+    <th>Id</th>
+    <th>Nama</th>
+    <th>Negara</th>
+    <th>Aktif</th>
+</tr>
 <?php $p->show(); ?>
 </table>
 
